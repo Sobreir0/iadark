@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
       <div className="max-w-5xl mx-auto z-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-white/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 animate-fadeIn">
           <Zap size={14} className="fill-current" />
-          Tendência Emergente 2026
+          As melhores tendências de Canais Dark de 2026
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tighter animate-fadeIn">
