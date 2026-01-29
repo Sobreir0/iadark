@@ -1,0 +1,247 @@
+
+<!-- 
+  O Mapa dos Nichos Virais 2026 
+  Estilo: Apple Glassmorphism (Gabriel Bauer Style)
+  Instruções: Cole este código em um Widget HTML do Elementor. 
+  Certifique-se de que a largura da seção no Elementor esteja como "Largura Total" e sem espaçamento.
+-->
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-color: #050505;
+        --blue-glow: rgba(59, 130, 246, 0.5);
+        --gold-glow: rgba(251, 191, 36, 0.4);
+    }
+
+    .lp-body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-color);
+        color: #ffffff;
+        overflow-x: hidden;
+        line-height: 1.5;
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-dark {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .glow-blue { box-shadow: 0 0 20px var(--blue-glow); }
+    .glow-gold { box-shadow: 0 0 25px var(--gold-glow); }
+
+    .text-gradient-gold {
+        background: linear-gradient(to right, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-blue {
+        background: linear-gradient(to right, #60a5fa, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes pulse-gold {
+        0%, 100% { transform: scale(1); box-shadow: 0 0 15px var(--gold-glow); }
+        50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(251, 191, 36, 0.7); }
+    }
+
+    .animate-pulse-gold { animation: pulse-gold 2s infinite ease-in-out; }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .animate-float { animation: float 4s infinite ease-in-out; }
+
+    .bg-decoration-1 {
+        position: fixed; top: -10%; left: -10%; width: 40%; height: 40%; 
+        background: rgba(37, 99, 235, 0.1); border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0;
+    }
+
+    .bg-decoration-2 {
+        position: fixed; bottom: -10%; right: -10%; width: 40%; height: 40%; 
+        background: rgba(217, 119, 6, 0.1); border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+</style>
+
+<div class="lp-body relative">
+    <div class="bg-decoration-1"></div>
+    <div class="bg-decoration-2"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
+        <div class="glass-dark px-6 py-3 rounded-full flex items-center gap-8 max-w-4xl w-full justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">M</div>
+                <span class="font-bold text-lg tracking-tight hidden sm:block">Mapa dos Nichos 2026</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-white/70">
+                <a href="#problema" class="hover:text-white transition-colors">O Problema</a>
+                <a href="#solucao" class="hover:text-white transition-colors">A Solução</a>
+                <a href="#beneficios" class="hover:text-white transition-colors">Benefícios</a>
+            </div>
+            <a href="#oferta" class="bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-white/90 transition-all hover:scale-105">
+                Quero Acessar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-white/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                Tendência Emergente 2026
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tighter">
+                A Chave Mestra para o <br>
+                <span class="text-gradient-blue">YouTube 2026</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Descubra o nicho inexplorado que vai te enriquecer antes que ele sature. 
+                Aprenda a dominar o algoritmo com <span class="text-white font-bold">velocidade e lucro absurdo.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <a href="#oferta" class="group relative bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all glow-blue hover:scale-105 flex items-center gap-2 overflow-hidden">
+                    QUERO O MAPA AGORA
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center gap-2 text-white/50 text-sm">
+                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    97 canais já faturando em dólar
+                </div>
+            </div>
+            <div class="relative mt-12 animate-float">
+                <div class="absolute inset-0 bg-blue-500/20 blur-[100px] -z-10"></div>
+                <div class="glass p-4 rounded-3xl border border-white/10 max-w-4xl mx-auto">
+                    <img src="https://picsum.photos/seed/ytchart/1200/600" alt="Gráfico" class="rounded-2xl w-full grayscale brightness-75 hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema -->
+    <section id="problema" class="py-24 px-6 relative bg-[#080808] z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">O Mar de Igualdade</h2>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto">99% dos criadores estão cometendo o erro fatal de copiar os grandes. Por que canais comuns estão morrendo hoje?</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl border border-white/5 group">
+                    <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block"><i data-lucide="skull" class="text-red-500 w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Saturação Extrema</h3>
+                    <p class="text-white/60">Canais que fazem "mais do mesmo" morrem sem visualizações e com CPM baixo.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/5 group">
+                    <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block"><i data-lucide="alert-triangle" class="text-amber-500 w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">O Algoritmo Te Ignora</h3>
+                    <p class="text-white/60">O YouTube enterra vídeos sem inovação no fundo da plataforma.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border border-white/5 group">
+                    <div class="mb-6 p-4 bg-white/5 rounded-2xl inline-block"><i data-lucide="ghost" class="text-gray-400 w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">Canais Fantasmas</h3>
+                    <p class="text-white/60">Horas de edição para colher 10 views. Esse é o cemitério dos canais comuns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solução -->
+    <section id="solucao" class="py-24 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-white/10 text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    <i data-lucide="gem" class="w-4 h-4"></i> O Antídoto
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Apresentamos: <br> <span class="text-gradient-gold">O Método Low Ticket</span></h2>
+                <p class="text-white/70 text-lg mb-8">Vídeos simples, de baixo custo, que geram faturamentos gigantescos através de pepitas de ouro do algoritmo.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-white/80 font-medium"><div class="w-2 h-2 rounded-full bg-blue-500"></div> Mineração de nichos americanos</li>
+                    <li class="flex items-center gap-3 text-white/80 font-medium"><div class="w-2 h-2 rounded-full bg-blue-500"></div> Engenharia reversa de virais</li>
+                    <li class="flex items-center gap-3 text-white/80 font-medium"><div class="w-2 h-2 rounded-full bg-blue-500"></div> Workflow de IA para escala</li>
+                </ul>
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <div class="glass p-6 rounded-3xl animate-float"><i data-lucide="target" class="text-blue-500 mb-4 w-8 h-8"></i><h4 class="font-bold">Foco Total</h4></div>
+                <div class="glass p-6 rounded-3xl animate-float" style="animation-delay: 1s"><i data-lucide="search" class="text-amber-500 mb-4 w-8 h-8"></i><h4 class="font-bold">Mineração</h4></div>
+                <div class="glass p-6 rounded-3xl animate-float" style="animation-delay: 0.5s"><i data-lucide="rocket" class="text-blue-500 mb-4 w-8 h-8"></i><h4 class="font-bold">Escala</h4></div>
+                <div class="glass p-6 rounded-3xl animate-float" style="animation-delay: 1.5s"><i data-lucide="gem" class="text-amber-500 mb-4 w-8 h-8"></i><h4 class="font-bold">Lucro</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta -->
+    <section id="oferta" class="py-24 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="glass p-8 md:p-12 rounded-[3rem] border-2 border-amber-500/20 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-amber-500 text-black px-6 py-2 rounded-b-2xl font-black text-sm uppercase tracking-widest shadow-lg">Oferta Limitada 2026</div>
+                <h2 class="text-4xl md:text-6xl font-black mb-6 mt-4">Entre para o <span class="text-gradient-gold italic">0.1%</span></h2>
+                <p class="text-white/70 text-lg mb-10">O mapa completo, lista de nichos e workflow de IA para escala imediata.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+                    <div class="text-left space-y-3">
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="text-green-400 w-5 h-5"></i> Mapa dos 12 Nichos 2026</div>
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="text-green-400 w-5 h-5"></i> Módulo YouTube Americano</div>
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="text-green-400 w-5 h-5"></i> Scripts com IA</div>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-white/40 line-through text-xl block">de R$ 997,00</span>
+                        <span class="text-5xl md:text-7xl font-black text-white block my-2">R$ 197</span>
+                        <span class="text-amber-500 font-bold block">12x de R$ 19,70</span>
+                    </div>
+                </div>
+                <a href="#" class="inline-block w-full max-w-md bg-amber-500 text-black py-6 rounded-[2rem] text-xl font-black animate-pulse-gold flex items-center justify-center gap-3 transition-transform">
+                    QUERO O MEU ACESSO AGORA <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-[#030303] text-center">
+        <div class="flex items-center justify-center gap-2 mb-6">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">M</div>
+            <span class="font-bold text-xl tracking-tight">Mapa dos Nichos 2026</span>
+        </div>
+        <p class="text-white/20 text-xs">© 2024 - 2026 Mapa dos Nichos Virais. Inspirado por Gabriel Bauer.</p>
+    </footer>
+</div>
+
+<script>
+    // Inicializa os ícones Lucide
+    lucide.createIcons();
+
+    // Fade in on scroll (opcional)
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0');
+                entry.target.classList.add('translate-y-0');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
